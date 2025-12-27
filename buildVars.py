@@ -24,7 +24,7 @@ addon_info = AddonInfo(
 	addon_description=_("""An add-on for NVDA that allows you to customize AC power status alerts
 using voice announcements, sound notifications, or both."""),
 	# version
-	addon_version="0.2.0",
+	addon_version="0.2.1",
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
 	addon_changelog=_("""Initial version"""),
