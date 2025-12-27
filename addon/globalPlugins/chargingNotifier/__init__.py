@@ -28,6 +28,7 @@ except addonHandler.AddonError:
 
 class NotificationType(IntEnum):
 	"""Notification type for charging status changes."""
+
 	VOICE = 0
 	SOUND = 1
 	VOICE_AND_SOUND = 2
@@ -100,14 +101,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super().__init__()
-		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(
-			settings.ChargingNotifierPanel
-		)
+		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.append(settings.ChargingNotifierPanel)
 		_powerTracking._reportPowerStatus = _patchedReportPowerStatus
 
 	def terminate(self):
 		super().terminate()
-		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(
-			settings.ChargingNotifierPanel
-		)
+		gui.settingsDialogs.NVDASettingsDialog.categoryClasses.remove(settings.ChargingNotifierPanel)
 		_powerTracking._reportPowerStatus = _originalReportPowerStatus

@@ -36,11 +36,7 @@ class ChargingNotifierPanel(gui.settingsDialogs.SettingsPanel):
 			wx.Choice,
 			choices=choices,
 		)
-		self._notificationTypeChoice.SetSelection(
-			config.conf["chargingNotifier"]["notificationType"]
-		)
+		self._notificationTypeChoice.SetSelection(config.conf["chargingNotifier"]["notificationType"])
 
 	def onSave(self):
-		config.conf["chargingNotifier"]["notificationType"] = (
-			self._notificationTypeChoice.GetSelection()
-		)
+		config.conf["chargingNotifier"]["notificationType"] = self._notificationTypeChoice.GetSelection()
