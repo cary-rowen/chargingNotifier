@@ -21,8 +21,8 @@ addon_info = AddonInfo(
 	addon_summary=_("Charging Notifier"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on add-on information from add-on store
-	addon_description=_("""Replaces NVDA's voice announcements for AC power status changes
-with sound notifications."""),
+	addon_description=_("""An add-on for NVDA that allows you to customize AC power status alerts
+using voice announcements, sound notifications, or both."""),
 	# version
 	addon_version="0.2.0",
 	# Brief changelog for this version

@@ -4,9 +4,8 @@
 # Copyright (C) 2025 Cary-rowen <manchen_0528@outlook.com>
 
 """
-Replaces NVDA's voice announcements for AC power status changes
-with sound notifications.
-"""
+An add-on for NVDA that allows you to customize AC power status alerts
+using voice announcements, sound notifications, or both."""
 
 import os
 from enum import IntEnum
@@ -36,7 +35,7 @@ class NotificationType(IntEnum):
 
 # Configuration specification
 CONFSPEC = {
-	"notificationType": f"integer(default={NotificationType.VOICE}, min=0, max=2)",
+	"notificationType": f"integer(default={NotificationType.SOUND}, min=0, max=2)",
 }
 config.conf.spec["chargingNotifier"] = CONFSPEC
 
